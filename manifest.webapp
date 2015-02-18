@@ -1,0 +1,31 @@
+{
+  "name": "QReader",
+  "description": "QR Reader",
+  "launch_path": "/qreader/index.html",
+  "app_cache": "http://logofid.es/qreader/cache.appcache",
+  "developer": {
+    "name": "Firefox OS Educational",
+    "url": "https://github.com/firefoxosedu"
+  },
+  "permissions": {
+    "video-capture": {
+      "description": "Share with QReader the video stream captured through the camera(s)"
+    }
+  },
+  "locales": {
+    "en-US": {
+      "name": "QReader",
+      "description": "QR Reader"
+    },
+    "es": {
+      "name": "QReader",
+      "description": "Lector QR"
+    }
+  },
+  "default_locale": "en-US",
+  "icons": {
+    "128": "http://logofid.es/qreader/style/icons/128.png",
+    "512": "http://logofid.es/qreader/style/icons/512.png"
+  },
+  "version": "1"
+}

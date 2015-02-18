@@ -1,0 +1,17 @@
+CACHE MANIFEST
+#version 85
+
+CACHE:
+index.html
+style/app.css
+style/img/download.svg
+style/img/close.svg
+style/img/loading.gif
+style/fonts/firasans-light-webfont.eot
+style/fonts/firasans-light-webfont.svg
+style/fonts/firasans-light-webfont.ttf
+style/fonts/firasans-light-webfont.woff
+style/fonts/firasans-light-webfont.woff2
+style/fonts/stylesheet.css
+js/app.js
+libs/jsqrcode.js
