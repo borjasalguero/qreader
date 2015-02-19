@@ -17,7 +17,13 @@ window.onload = function() {
     };
   }
 
+  var isLaunched = false;
   function launchReader() {
+    if (isLaunched) {
+      return;
+    }
+
+    isLaunched = true;
     navigator.getMedia(
       {
         video: true,
@@ -133,9 +139,9 @@ window.onload = function() {
   }
 
   if (window.navigator.mozApps) {
-    var request = window.navigator.mozApps.checkInstalled('http://logofid.es/qreader/manifest.webapp');
+    var request = window.navigator.mozApps.checkInstalled('http://logofid.es/qreader/manifest_hosted.webapp');
     request.onerror = function(e) {
-      console.log("Error calling checkInstalled: " + request.error.name);
+      console.log("Error calling checkInstalled");
     };
     request.onsuccess = function(e) {
       if (request.result) {
@@ -147,7 +153,7 @@ window.onload = function() {
         installButton.addEventListener(
           'click',
           function() {
-            var request = window.navigator.mozApps.install('http://logofid.es/qreader/manifest.webapp');
+            var request = window.navigator.mozApps.install('http://logofid.es/qreader/manifest_hosted.webapp');
             request.onsuccess = function () {
               installButton.classList.add('hidden');
               alert('Installation successful!');
@@ -169,10 +175,17 @@ window.onload = function() {
     }
   );
 
-
   var appCache = window.applicationCache;
 
+
+  var shield = setTimeout(function() {
+    launchReader();
+  }, 2000);
+
   function handleCacheEvent() {
+    if (shield) {
+      clearTimeout(shield);
+    }
     switch (appCache.status) {
       case appCache.UNCACHED: // UNCACHED == 0
         console.log('UNCACHED');
