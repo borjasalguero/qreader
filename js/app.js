@@ -177,6 +177,17 @@ window.onload = function() {
     }
   );
 
+
+  document.getElementById('update').addEventListener(
+    'click',
+    function() {
+      var confirm = window.confirm('¿Quieres comprobar si hay alguna actualizacion?');
+      if (confirm) {
+        window.applicationCache.update();
+      }
+    }
+  );
+
   var appCache = window.applicationCache;
 
   function handleCacheEvent() {
@@ -245,10 +256,5 @@ window.onload = function() {
   // Fired when the manifest resources have been newly redownloaded.
   appCache.addEventListener('updateready', handleCacheEvent, false);
 
-  document.getElementById('reload').addEventListener(
-    'click',
-    function() {
-      appCache.reload();
-    }
-  );
+
 }
