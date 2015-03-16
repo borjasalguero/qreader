@@ -197,6 +197,7 @@ window.onload = function() {
         break;
       case appCache.UPDATEREADY:  // UPDATEREADY == 4
         console.log('UPDATEREADY!!!!!');
+        appCache.swapCache();
         var confirm = window.confirm('Hemos detectado una nueva versión, ¿quieres disfrutarla ahora?');
         if (!confirm) {
           launchReader();
@@ -244,6 +245,10 @@ window.onload = function() {
   // Fired when the manifest resources have been newly redownloaded.
   appCache.addEventListener('updateready', handleCacheEvent, false);
 
-
-
+  document.getElementById('reload').addEventListener(
+    'click',
+    function() {
+      appCache.reload();
+    }
+  );
 }

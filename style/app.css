@@ -128,7 +128,7 @@ p#reader[loading] {
   position: absolute;
 }
 
-#close, #install {
+#close, #install, #reload {
   height: 4rem;
   width: 4rem;
   border-radius: 50%;
@@ -144,8 +144,13 @@ p#reader[loading] {
 }
 
 #install {
-  right: 6rem;
+  right: 11rem;
   background: url("img/download.svg") no-repeat scroll center center / 2rem auto rgba(255, 255, 255, 0.85);
+}
+
+#reload {
+  right: 6rem;
+  background: url("img/update.svg") no-repeat scroll center center / 2rem auto rgba(255, 255, 255, 0.85);
 }
 
 #close {
