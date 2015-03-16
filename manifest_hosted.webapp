@@ -1,8 +1,8 @@
 {
   "name": "QReader",
   "description": "QR Reader",
-  "launch_path": "/qreader/index.html",
-  "appcache_path": "http://borjasalguero.github.io/qreader/cache.appcache",
+  "launch_path": "/qreader_github/index.html",
+  "appcache_path": "http://logofid.es/qreader_github/cache.appcache",
   "developer": {
     "name": "Borja Salguero",
     "url": "https://github.com/borjasalguero/qreader"
@@ -24,8 +24,8 @@
   },
   "default_locale": "en-US",
   "icons": {
-    "128": "http://borjasalguero.github.io/qreader/style/icons/128.png",
-    "512": "http://borjasalguero.github.io/qreader/style/icons/512.png"
+    "128": "http://logofid.es/qreader_github/style/icons/128.png",
+    "512": "http://logofid.es/qreader_github/style/icons/512.png"
   },
   "version": "1"
 }
