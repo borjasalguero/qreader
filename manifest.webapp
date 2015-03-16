@@ -3,8 +3,8 @@
   "description": "QR Reader",
   "launch_path": "/index.html",
   "developer": {
-    "name": "Firefox OS Educational",
-    "url": "https://github.com/firefoxosedu"
+    "name": "Firefox OS QReader",
+    "url": "https://github.com/borjasalguero/qreader"
   },
   "permissions": {
     "video-capture": {

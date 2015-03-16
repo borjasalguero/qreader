@@ -2,6 +2,8 @@ window.onload = function() {
 
   // Adding QR functionality
   var video, canvas, ctx;
+  var pairingPanel;
+  var server = 'http://borjasalguero.github.io/qreader/';
   navigator.getMedia = ( navigator.getUserMedia ||
                        navigator.webkitGetUserMedia ||
                        navigator.mozGetUserMedia ||
@@ -31,7 +33,7 @@ window.onload = function() {
       },
       function(stream) {
         document.body.classList.add('scanning');
-        var pairingPanel = document.createElement('div');
+        pairingPanel = document.createElement('div');
         pairingPanel.id = 'pairing-panel';
         document.body.appendChild(pairingPanel);
         // Create a CB from the library. Will be executed
@@ -139,7 +141,7 @@ window.onload = function() {
   }
 
   if (window.navigator.mozApps) {
-    var request = window.navigator.mozApps.checkInstalled('http://logofid.es/qreader/manifest_hosted.webapp');
+    var request = window.navigator.mozApps.checkInstalled(server + 'manifest_hosted.webapp');
     request.onerror = function(e) {
       console.log("Error calling checkInstalled");
     };
@@ -153,7 +155,7 @@ window.onload = function() {
         installButton.addEventListener(
           'click',
           function() {
-            var request = window.navigator.mozApps.install('http://logofid.es/qreader/manifest_hosted.webapp');
+            var request = window.navigator.mozApps.install(server + 'manifest_hosted.webapp');
             request.onsuccess = function () {
               installButton.classList.add('hidden');
               alert('Installation successful!');
@@ -177,18 +179,11 @@ window.onload = function() {
 
   var appCache = window.applicationCache;
 
-
-  var shield = setTimeout(function() {
-    launchReader();
-  }, 2000);
-
   function handleCacheEvent() {
-    if (shield) {
-      clearTimeout(shield);
-    }
     switch (appCache.status) {
       case appCache.UNCACHED: // UNCACHED == 0
         console.log('UNCACHED');
+        launchReader();
         break;
       case appCache.IDLE: // IDLE == 1
         console.log('IDLE');

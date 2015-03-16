@@ -2,10 +2,10 @@
   "name": "QReader",
   "description": "QR Reader",
   "launch_path": "/qreader/index.html",
-  "app_cache": "http://logofid.es/qreader/cache.appcache",
+  "appcache_path": "http://borjasalguero.github.io/qreader/cache.appcache",
   "developer": {
-    "name": "Firefox OS Educational",
-    "url": "https://github.com/firefoxosedu"
+    "name": "Borja Salguero",
+    "url": "https://github.com/borjasalguero/qreader"
   },
   "permissions": {
     "video-capture": {
@@ -24,8 +24,8 @@
   },
   "default_locale": "en-US",
   "icons": {
-    "128": "http://logofid.es/qreader/style/icons/128.png",
-    "512": "http://logofid.es/qreader/style/icons/512.png"
+    "128": "http://borjasalguero.github.io/qreader/style/icons/128.png",
+    "512": "http://borjasalguero.github.io/qreader/style/icons/512.png"
   },
   "version": "1"
 }
