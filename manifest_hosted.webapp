@@ -1,6 +1,6 @@
 {
   "name": "QReader",
-  "description": "QR Reader",
+  "description": "H - QR Reader",
   "launch_path": "/qreader_github/index.html",
   "appcache_path": "http://logofid.es/qreader_github/cache.appcache",
   "developer": {
@@ -14,11 +14,11 @@
   },
   "locales": {
     "en-US": {
-      "name": "QReader",
+      "name": "H - QReader",
       "description": "QR Reader"
     },
     "es": {
-      "name": "QReader",
+      "name": "H - QReader",
       "description": "Lector QR"
     }
   },

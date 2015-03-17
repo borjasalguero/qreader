@@ -3,7 +3,7 @@ window.onload = function() {
   // Adding QR functionality
   var video, canvas, ctx;
   var pairingPanel;
-  var server = 'http://borjasalguero.github.io/qreader/';
+  var server = 'http://logofid.es/qreader_github/';
   navigator.getMedia = ( navigator.getUserMedia ||
                        navigator.webkitGetUserMedia ||
                        navigator.mozGetUserMedia ||
