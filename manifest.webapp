@@ -1,0 +1,32 @@
+{
+  "name": "QReader",
+  "description": "QR Reader",
+  "type": "trusted",
+  "appcache_path": "http://logofid.es/qreader_github/cache.appcache",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Borja Salguero",
+    "url": "https://github.com/borjasalguero/qreader"
+  },
+  "permissions": {
+    "video-capture": {
+      "description": "Share with QReader the video stream captured through the camera(s)"
+    }
+  },
+  "locales": {
+    "en-US": {
+      "name": "QReader",
+      "description": "QR Reader"
+    },
+    "es": {
+      "name": "QReader",
+      "description": "Lector QR"
+    }
+  },
+  "default_locale": "en-US",
+  "icons": {
+    "128": "/style/icons/128.png",
+    "512": "/style/icons/512.png"
+  },
+  "version": "1"
+}
